@@ -1,17 +1,37 @@
 $(document).ready(function() {
     var chosenHero 
     var chosenEnemy
+    var isHeroChosen
+    var isEnemyChosen
     var isHeroAlive
     var isEnemyAlive
 
     function initGame () {
+        isHeroChosen = false
+        isEnemyChosen = false
         for ( var i = 0 ; i < charArr.length ; i++) {
             var num = Math.floor(12 / charArr.length)
-            var charThing = $("<div class='col-md"+num+"'><img src='"+charArr[i].image+"' style='width:150px;height:150px;'/></div>")
+            var charThing = $("<div class='myChar col-md"+num+"' value='"+i+"'><img src='"+charArr[i].image+"' style='width:150px;height:150px;'/></div>")
             $("#characters").append(charThing)
-        }
+        }   
     }
-    // name, hp, strength, image
+    // Click to choose hero
+    $(document).on("click", ".myChar", function() {
+       if (isHeroChosen === false) {
+            chosenHero = charArr[$(this).attr("value")]
+            console.log(chosenHero)
+            $(this).addClass("fader")
+            isHeroChosen = true 
+       }
+       else if (isEnemyChosen === false && chosenHero.name !== charArr[$(this).attr("value")].name) {
+           chosenEnemy = charArr[$(this).attr("value")]
+           console.log(chosenEnemy)
+           $(this).addClass("fader")
+           isEnemyChosen = true
+       }
+    })
+
+    // name, hp, sterngth, image
     var charArr =[ 
     {
         name : "Fry",
