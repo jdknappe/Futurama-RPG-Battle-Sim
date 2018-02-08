@@ -7,7 +7,7 @@ $(document).ready(function() {
     function initGame () {
         for ( var i = 0 ; i < charArr.length ; i++) {
             var num = Math.floor(12 / charArr.length)
-            var charThing = $("<div class='col-md"+num+"'><img src='"+charArr[i].imgage+"' style='width:150px;height:150px;'/></div>")
+            var charThing = $("<div class='col-md"+num+"'><img src='"+charArr[i].image+"' style='width:150px;height:150px;'/></div>")
             $("#characters").append(charThing)
         }
     }
@@ -17,44 +17,44 @@ $(document).ready(function() {
         name : "Fry",
         hp : 50,
         strength : 50,
-        image : "fryguy.jpeg"
+        image : "./assets/images/fryguy.jpeg"
     },
     {
         name : "Kiff",
         hp : 50,
         strength : 10,
-        image : "kiff.jpeg"
+        image : "./assets/images/kiff.jpeg"
     },
     {
         name : "Leila",
         hp : 60,
         strength : 60,
-        image : "leila.jpeg"
+        image : "./assets/images/leila.jpeg"
     },
     {
         name : "Zoidberg",
         hp : 50,
         strength : 60,
-        image : "zoidberg.jpeg"
+        image : "./assets/images/zoidberg.jpeg"
     },
     {
         name : "Bender",
         hp : 60,
         strength : 80,
-        image : "bender.jpeg"
+        image : "./assets/images/bender.jpeg"
     },
     {
-        name : "Hermes",
+        name : "Hermes",    
         hp : 40,
         strength : 40,
-        image : "hermes.jpeg"
+        image : "./assets/images/hermes.jpeg"
     },
     {
         name : "Amy",
         hp : 50,
         strength : 50,
-        image : "amy.jpeg"
-    },
+        image : "./assets/images/amy.jpeg"
+    }
     ]
 
     initGame()
