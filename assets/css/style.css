@@ -1,7 +1,19 @@
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url(https://www.dailydot.com/wp-content/uploads/6d6/28/252609d59df37fb71470b0a428a0af09.jpg)
 }
 
 .fader {
     opacity: 0.4;
+}
+
+.jumbotron {
+    font-family: 'Press Start 2P', cursive;
+    color: #ff0000;
+    /* Want to make jumbotron transparent; text only. */
+}
+
+.footer {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffcc00;
 }

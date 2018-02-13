@@ -7,9 +7,14 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <title>Futurama RPG Game!</title>
 </head>
 <body>
+    <div class="jumbotron text-center">
+        <h1>Futurama RPG Battle Sim</h1>
+    </div>
+    <!-- Gameplay divs -->
     <div class="container">
         <div id="characters" class="row"></div>
         <div id="gameplay" class="row">
@@ -18,9 +23,13 @@
                 <button class="btn btn-success btn-lg">Ready?</button>
             </div>
             <div class="col-md-4 myEnemy"></div>
-            
         </div>
     </div>
+    <!-- footer -->
+    <footer class="container-fluid footer text-center">
+        <p>Copyright &copy Jeremy Knappe 2018</p>
+    </footer>
+    <!-- jQuery CDN -->
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="./assets/javascript/game.js"></script>

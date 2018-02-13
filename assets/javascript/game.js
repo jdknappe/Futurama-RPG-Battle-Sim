@@ -3,8 +3,8 @@ $(document).ready(function() {
     var chosenEnemy
     var isHeroChosen
     var isEnemyChosen
-    var isHeroAlive
-    var isEnemyAlive
+    var isHeroAlive 
+    var isEnemyAlive 
 
     function initGame () {
         isHeroChosen = false
@@ -98,16 +98,23 @@ $(document).ready(function() {
     })
     $(document).on("click", ".attackBTN", function () {
         chosenHero.hp -= Math.floor(Math.random() * 50)
+        console.log(chosenHero.hp)
         chosenEnemy.hp -= Math.floor(Math.random() * 50)
         $(".myHeroHP").text(chosenHero.hp)
         $(".myEnemyHP").text(chosenEnemy.hp)
     }) 
 
-    if (chosenHero < 0) {
-        alert("Your hero wins!")
-    }
-    else if (chosenEnemy < 0) {
-        alert("The enemy has TRIUMPHED!")
-    }
+    // Endgame winner alert
+    $(document).on("click", ".attackBTN", function () {
+        if (chosenHero.hp < 1) {
+            alert("Your enemy, "+chosenEnemy.name+", emerges VICTORIOUS! Choose your new characters.")
+            location.reload()
+        }
+        else if (chosenEnemy.hp < 1) {
+            alert("Your hero, "+chosenHero.name+", emerges TRIUMPHANT! Choose your new characters.")
+            location.reload()
+        }
+    })
+    
     initGame()
 })
