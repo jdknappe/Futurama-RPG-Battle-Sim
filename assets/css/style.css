@@ -1,19 +1,39 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url(https://www.dailydot.com/wp-content/uploads/6d6/28/252609d59df37fb71470b0a428a0af09.jpg)
+body, html {
+    font-family: 'Luckiest Guy', cursive;    background-image: url(../images/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
 }
 
-.fader {
-    opacity: 0.4;
+.section-title { font-size: 200%; }
+
+.main-section-title {
+    font-size: 300%; 
+    text-align: center;
 }
 
-.jumbotron {
-    font-family: 'Press Start 2P', cursive;
-    color: #ff0000;
-    /* Want to make jumbotron transparent; text only. */
+img {
+    height: 100px;
+    width: 150px;
+    border-radius: 10px;
 }
 
-.footer {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #ffcc00;
+.character {
+    display: inline-block;
+    border-style: solid;
+    border-color: rebeccapurple;
+    border-width: 3px;
+    cursor: pointer;
+    background-color: white;
 }
+
+.character-image{
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.character-name { text-align: center; }
+.character-health { text-align: center; }
